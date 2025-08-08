@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Content & Forms</title>
+</head>
+<body>
+
+    <main>
+        <h1>Advanced HTML5 Content & Forms</h1>
+        <p>This page demonstrates the use of semantic HTML5 elements for structured content and a comprehensive web form.</p>
+
+        <section>
+            <h2>Media Showcase 🖼️</h2>
+            <p>This section includes an image, an audio file, and a video to demonstrate embedding different media types.</p>
+            
+            <h3>Image Example</h3>
+            <figure>
+                <img src="https://www.pexels.com/photo/charming-outdoor-cafe-in-bozcaada-turkiye-33238710/" alt="outside cafe." width="600" height="400">
+                <figcaption>outside Cafe <code>&lt;img&gt;</code> element.</figcaption>
+            </figure>
+
+            <h3>Audio Example</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>Video Example</h3>
+            <video width="600" height="400" controls>
+                <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Content Organization with Lists and Tables 📊</h2>
+            <p>Here, we use lists and a table to present information clearly and accessibly.</p>
+
+            <h3>Top 5 Programming Languages (Ordered List)</h3>
+            <ol>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>C#</li>
+                <li>C++</li>
+            </ol>
+
+            <h3>Web Development Technologies (Unordered List)</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+            </ul>
+
+            <h3>Monthly Sales Report (Table)</h3>
+            <table border="1" style="width:100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Revenue</th>
+                        <th>Expenses</th>
+                        <th>Profit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>January</td>
+                        <td>$5,000</td>
+                        <td>$2,000</td>
+                        <td>$3,000</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$6,500</td>
+                        <td>$2,500</td>
+                        <td>$4,000</td>
+                    </tr>
+                    <tr>
+                        <td>March</td>
+                        <td>$7,200</td>
+                        <td>$3,000</td>
+                        <td>$4,200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>User Registration Form 📝</h2>
+            <p>This form demonstrates various HTML5 input types and validation attributes without JavaScript.</p>
+            
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <p>
+                        <label for="fullName">Full Name:</label><br>
+                        <input type="text" id="fullName" name="fullName" placeholder="John Doe" required autocomplete="name" style="width:100%;">
+                    </p>
+                    <p>
+                        <label for="email">Email Address:</label><br>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required autocomplete="email" style="width:100%;">
+                    </p>
+                    <p>
+                        <label for="phoneNumber">Phone Number:</label><br>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g., 123-456-7890" pattern="\d{3}-\d{3}-\d{4}" autocomplete="tel" style="width:100%;">
+                        <small>Format: 123-456-7890</small>
+                    </p>
+                    <p>
+                        <label for="dob">Date of Birth:</label><br>
+                        <input type="date" id="dob" name="dob" required style="width:100%;">
+                    </p>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Account Details</legend>
+                    <p>
+                        <label for="username">Username:</label><br>
+                        <input type="text" id="username" name="username" placeholder="johndoe123" required minlength="5" maxlength="20" style="width:100%;">
+                        <small>Must be between 5 and 20 characters.</small>
+                    </p>
+                    <p>
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="password" name="password" required minlength="8" style="width:100%;">
+                        <small>Must be at least 8 characters long.</small>
+                    </p>
+                    <p>
+                        <label for="website">Website URL:</label><br>
+                        <input type="url" id="website" name="website" placeholder="https://www.example.com" style="width:100%;">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <p>
+                        <label for="favoriteColor">Favorite Color:</label><br>
+                        <input type="color" id="favoriteColor" name="favoriteColor">
+                    </p>
+                    <p>
+                        <label for="newsletter">Subscribe to Newsletter:</label><br>
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                    </p>
+                    <p>
+                        <label for="accountType">Account Type:</label><br>
+                        <select id="accountType" name="accountType" style="width:100%;">
+                            <option value="basic">Basic</option>
+                            <option value="premium" selected>Premium</option>
+                            <option value="enterprise">Enterprise</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="feedback">Feedback:</label><br>
+                        <textarea id="feedback" name="feedback" rows="4" placeholder="Your comments here..." style="width:100%;"></textarea>
+                    </p>
+                    <p>
+                        <label for="readOnlyField">Read-only Field:</label><br>
+                        <input type="text" id="readOnlyField" name="readOnlyField" value="This field is read-only." readonly style="width:100%;">
+                    </p>
+                </fieldset>
+
+                <input type="submit" value="Register">
+            </form>
+        </section>
+
+    </main>
+
+</body>
+</html>
